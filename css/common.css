@@ -1,0 +1,151 @@
+@charset "utf-8";
+@font-face {
+    font-family: segoeui;
+    src: url(../webfont/segoeui.eot);
+    src: url(../webfont/segoeui.ttf);
+    src: url(../webfont/segoeui.woff);
+}
+
+
+/* 초기화 */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: "segoe UI", segoeui, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.hidden {
+    display: none;
+}
+hr {
+    display: none;
+}
+
+
+/* header */
+
+#header {
+    width: 1000px; height: 187px;
+    margin: 0 auto;
+    position: relative;
+}
+#header h1 {
+    width: 249px; height: 50px;
+    padding: 92px 0 0 50px;
+}
+#header h1 a {
+    display: block;
+    height: 50px;
+    background: url(../images/logo.png);
+    text-indent: -9999px;
+}
+
+
+/* membership */
+
+#membership {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+}
+#membership ul li {
+    float: left;
+    position: relative;
+    padding-right: 13px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+#membership ul li.goLogin::after {
+    content: "";
+    position: absolute;
+    height: 11px;
+    border-right: 1px solid #bea082;
+    top: 7px;
+    right: 0;
+
+}
+#membership ul li.goJoin {
+    padding-left: 13px;
+}
+#membership ul li.goJoin::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    border-left: 1px solid #82a0be;
+    height: 11px;
+}
+
+
+/* gnb */
+
+#gnb {
+    position: absolute;
+    top: 110px;
+    right: 40px;
+}
+#gnb ul li {
+    float: left;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+#gnb ul li a {
+    padding: 15px 10px;
+}
+#gnb ul li a:hover {
+    border-bottom: 2px solid #00bff3;
+}
+
+
+/* footer */
+#footerWrap {
+    width: 100%; height: 77px;
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+#footer {
+    width: 910px; height: 77px;
+    margin: 24px auto;
+    position: relative;
+}
+
+
+/* info */
+
+.info {
+    background: url(../images/logoFooter.png) no-repeat 0px 5px;
+    padding-left: 155px;
+}
+.info address {
+    font-style: normal;
+    font-size: 14px;
+}
+
+
+/* sns */
+.sns {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sns li {
+    float: left;
+}
+
+.sns li a {
+    display: block;
+    width: 33px; height: 33px;
+    background: url(../images/bgSns.png);
+    text-indent: -9999px;
+    margin-right: 17px;
+}
+.sns li.twitter a {
+    background-position-x: right;
+}
