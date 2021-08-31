@@ -26,9 +26,6 @@
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
 }
-#subHeader.subHeaderCompany {
-    background-image: url(../images/sub_bg.jpg);
-}
 #subHeader h2 {
     color: #fff;
     text-align: center;
@@ -42,8 +39,13 @@
 /* subWrap */
 
 #subWrap {
-    width: 1000px; height: 610px;
+    width: 1000px;
     margin: 30px auto;
+}
+#subWrap::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 
@@ -52,23 +54,36 @@
 #snb {
     float: left;
     width: 250px; height: 610px;
+    text-transform: uppercase;
 }
 #snb h3 {
     width: 100%; height: 95px;
     text-align: center;
-    line-height: 95px;
     color: #fff;
     background: #3c3c3c;
-    text-transform: uppercase;
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 15px;
+    line-height: 95px;
 }
-#snb ul li {
-    padding: 18px 22px;
-    text-transform: uppercase;
-    font-size: 20px;
+#snb li a {
+    display: block;
+    height: 50px;
     border-bottom: 1px solid #b6bbc5;
+    line-height: 50px;
+    text-indent: 22px;
+    color: #333;
+    background: url(../images/bulletSnb.png) no-repeat 229px center;
+}
+#snb li a:hover {
+    color: #e77348;
+    border-bottom-color: #e77348;
+    background-image: url(../images/bulletSnbOver.png);
+}
+/* #snb ul li {
+    padding: 18px 22px;
+    font-size: 20px;
+    border-bottom: 1px solid #5e677a;
     position: relative;
 }
 #snb ul li::after {
@@ -82,32 +97,134 @@
 }
 #snb ul li:hover {
     background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 
 /* subContent */
 
 #subContent {
-    float: left;
-    width: 710px; height: 610px;
-    padding: 0 0 0 40px;
+    float: right;
+    width: 710px;
 }
 #subContent h3 {
     color: #d0c8c6;
-    font-size: 40px;
     text-transform: capitalize;
-    font-family: serif;
     margin-bottom: 20px;
-}
-#subContent p {
-    margin: 0 22px 18px 0;
+    font: 40px "Times New Roman", serif;
+    /* font-size: 40px;
+    font-family: serif; */
 }
 #subContent figure {
     float: right;
-    margin: 0 0 18px 14px;
+    margin: 0 0 15px 10px;
+    text-align: center;
 }
 #subContent figure figcaption {
-    text-align: center;
     color: #7092da;
     font-size: 14px;
+}
+
+
+/* 서브페이지 개별 */
+
+/* company_welcome */
+
+#subHeader.subHeaderCompany {
+    background-image: url(../images/subTitleCompany.jpg);
+}
+.subContentCompany {
+    padding: 0 45px 0 20px;
+}
+
+
+/* costomercenter_notice */
+
+#snb .snbTitleCustomer {
+    padding-top: 10px;
+    line-height: 1.2em;
+    box-sizing: border-box;
+}
+#subHeader.subHeaderCustomer {
+    background-image: url(../images/subTitleCustomer.jpg);
+}
+
+#notice {
+    width: 660px;
+}
+#notice thead { 
+    height: 30px; 
+}
+#notice thead th { 
+    height: 30px; 
+    color: #fff;
+    font-weight: normal;
+    text-transform: capitalize;
+    background: linear-gradient(180deg, #6dbaf2 0%, #246fd2 100%);
+}
+#notice thead th.no { 
+    width: 56px;
+    border-radius: 5px 0 0 5px;
+}
+#notice thead th.title { 
+    width: 276px;
+    letter-spacing: 0.5em;
+}
+#notice thead th.write { 
+    width: 100px; 
+}
+#notice thead th.date {
+     width: 72px; 
+}
+#notice thead th.read {
+     width: 56px; 
+     border-radius: 0 5px 5px 0;
+}
+#notice tbody {}
+#notice tbody td {
+    padding: 5px 0;
+    text-align: center;
+    border-bottom: 1px dotted #333;
+}
+#notice tbody td:nth-child(2) {
+    text-align: left;
+}
+/* #notice tbody td.listTitle {
+    text-align: left;
+} */
+#notice tbody td div {
+    width: 376px; /* 넓이 안넣으면 적용되지 않는다 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 검색 */
+
+#noticeSearch {
+    margin: 16px 45px 35px 0;
+    text-align: right; /* 인라인 요소이기 때문 */
+    /* float: right; */
+}
+#noticeSearch input {
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+#noticeSearch #searchBox {
+    width: 200px; height: 20px;
+    background-color: #fefdeb;
+    text-indent: 10px;
+}
+#noticeSearch #searchBtn { /* 버튼자체 보더가 조금 더 작음 -> 버튼의 특징 */
+    width: 88px; height: 22px;
+    background-color: #246fd2;
+    color: #fff;
+}
+#page_control {
+    text-align: center;
+    margin-right: 45px;
+}
+#page_control a {
+    color: #333;
+    margin: 0 13px;
 }
